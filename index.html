@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colin Ward | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts and Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-c5CgmoPv1e8KkmVScdF9eD3QY7GjzjPf0JKClJh6YWuL/qRSN8pYfNmzkp5a7fE0dvP27Z9Q1A5Z7W3xFKn4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.svg" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>Colin Ward</h1>
+            <h2>Computer Science Student & Developer</h2>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container about-container">
+            <h3>About Me</h3>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="ColinWardHeadshot.jpg" alt="Colin Ward">
+                </div>
+                <div class="about-text">
+                    <p>
+                        I am a Computer Science major at Wake Forest University with minors in Mathematics and Entrepreneurship. With a passion for developing innovative solutions, I have experience in various programming languages and frameworks. I have interned at Reynolds American Inc. and Easton Utilities, working on data modeling, web development, and optimization projects. I am proficient with Linux, Git, and have experience with Java, SQL, C, Python, and more. In addition to my technical skills, I have demonstrated leadership as the Head Committee Chair for Chi Psi Fraternity and participated in Men's Club Lacrosse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h3>Technical Skills</h3>
+            <div class="skills-table">
+                <!-- Backend Development -->
+                <div class="skills-row">
+                    <div class="skills-category">Backend Development</div>
+                    <div class="skills-list">
+                        <span><i class="fab fa-java"></i> Java</span>
+                        <span><i class="fas fa-database"></i> SQL</span>
+                        <span><i class="fas fa-code"></i> C</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                        <span><i class="fas fa-code"></i> Racket</span>
+                        <span><i class="fas fa-code"></i> C#</span>
+                    </div>
+                </div>
+                <!-- Frontend Development -->
+                <div class="skills-row">
+                    <div class="skills-category">Frontend Development</div>
+                    <div class="skills-list">
+                        <span><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span><i class="fab fa-html5"></i> HTML</span>
+                        <span><i class="fab fa-css3-alt"></i> CSS</span>
+                    </div>
+                </div>
+                <!-- Data Analytics -->
+                <div class="skills-row">
+                    <div class="skills-category">Data Analytics</div>
+                    <div class="skills-list">
+                        <span><i class="fas fa-file-excel"></i> Excel</span>
+                        <span><i class="fas fa-chart-bar"></i> Power BI</span>
+                        <span><i class="fas fa-cloud"></i> Databricks</span>
+                        <span><i class="fas fa-snowflake"></i> Snowflake</span>
+                        <span><i class="fab fa-python"></i> Jupyter</span>
+                    </div>
+                </div>
+                <!-- Machine Learning -->
+                <div class="skills-row">
+                    <div class="skills-category">Machine Learning</div>
+                    <div class="skills-list">
+                        <span><i class="fab fa-python"></i> PyTorch</span>
+                        <span><i class="fas fa-brain"></i> scikit‑learn</span>
+                    </div>
+                </div>
+                <!-- Platforms & Tools -->
+                <div class="skills-row">
+                    <div class="skills-category">Platforms & Tools</div>
+                    <div class="skills-list">
+                        <span><i class="fab fa-linux"></i> Linux</span>
+                        <span><i class="fab fa-git-alt"></i> Git</span>
+                        <span><i class="fas fa-code"></i> VSCode</span>
+                        <span><i class="fas fa-database"></i> MS SQL Server</span>
+                        <span><i class="fab fa-android"></i> Android Studio</span>
+                    </div>
+                </div>
+                <!-- Additional Skills -->
+                <div class="skills-row">
+                    <div class="skills-category">Additional Skills</div>
+                    <div class="skills-list">
+                        <span><i class="fas fa-file-word"></i> Microsoft Office</span>
+                        <span><i class="fab fa-google-drive"></i> Google Drive</span>
+                        <span><i class="fab fa-instagram"></i> Instagram</span>
+                        <span><i class="fab fa-linkedin"></i> LinkedIn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h3>My Projects</h3>
+            <div class="project-grid">
+                <!-- Project 1: Meta-Learning for Coreset Selection -->
+                <div class="project-item" style="flex: 1 1 100%;">
+                    <div class="project-info">
+                        <h4>Meta‑Learning for Coreset Selection: Identifying Optimal Techniques Across Diverse Datasets</h4>
+                        <h5>Machine Learning Research Project</h5>
+                        <p>
+                            Meta‑Learning for Coreset Selection is a semester-long machine learning research project conducted in a team of two. In this project, my teammate and I evaluated various coreset selection techniques across 76 diverse datasets to develop a meta‑model that predicts the optimal method for data reduction. It involved extensive problem solving, designing a pipeline to test techniques, systematically collecting metadata, and building the meta‑model, that sharpened my skills in scikit‑learn, data preprocessing, and model evaluation, and remains one of my proudest collaborative achievements.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/colinward77/Meta-Learning-for-Coreset-Selectio" class="btn" target="_blank">View on GitHub</a>
+                            <a href="Meta-Learning for Coreset Selection - Colin Ward & Ahmed Ali.pdf" class="btn" download>Download Paper</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: WakeUp Android App -->
+                <div class="project-item" style="flex: 1 1 100%;">
+                    <div class="project-info">
+                        <h4>WakeUp Android App</h4>
+                        <h5>Software Engineering Class Project</h5>
+                        <p>
+                            WakeUp is an Android app designed to help users reduce screen time on addictive social media platforms. Although the project was never fully completed due to class limitations, it was a collaborative effort with a team of five. Through this project, I gained valuable experience in defining user stories, managing tasks using Jira and SDLC methodologies, and contributing to both a Java-based backend and an XML-driven frontend. This hands-on project enhanced my teamwork skills and deepened my technical understanding of mobile app development.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/zhanjz22/AddictionFighter2" class="btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: Personal Portfolio -->
+                <div class="project-item" style="flex: 1 1 100%;">
+                    <div class="project-info">
+                        <h4>Personal Portfolio</h4>
+                        <h5>Personal Web‑Design Project</h5>
+                        <p>
+                            Developing my personal portfolio enhanced my skills in HTML, CSS, and JavaScript while teaching me how to build responsive, user-friendly interfaces. I also improved my workflow with Git and my practices in clean coding and debugging. This project stands as a practical showcase of my technical growth and creative problem-solving.
+                        </p>
+                        <div class="project-buttons">
+                            <a href="GITHUB_LINK_FOR_PORTFOLIO" class="btn" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-projects">
+                <p>More coming soon...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h3>Resume</h3>
+            <p>You can download my resume by clicking the button below.</p>
+            <a href="ColinWard_Resume.pdf" class="btn" download>Download Resume</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h3>Contact</h3>
+            <p>Email: wardcj21@wfu.edu</p>
+            <p>Phone: (240) 772-7308</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Colin Ward. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Responsive Menu -->
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>
