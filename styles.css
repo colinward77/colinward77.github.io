@@ -291,8 +291,12 @@ header h2 {
 .project-buttons {
     margin-top: 1rem;
 }
-.project-buttons a {
-    margin-right: 1rem;
+@media (max-width: 768px) {
+    .project-buttons a {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      display: block;
+    }
 }
 
 /* More Project */
