@@ -9,9 +9,14 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     color: #e0e0e0;
-    background-color: #121212;
+    background: linear-gradient(120deg, #181f2a 0%, #232a34 100%);
+    line-height: 1.7;
+}
+
+code, pre, .code, .skills-list span {
+    font-family: 'Roboto Mono', 'Fira Mono', 'Consolas', monospace;
 }
 
 a {
@@ -21,7 +26,7 @@ a {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -77,55 +82,125 @@ nav .container {
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
-header {
+/* Apple-like Hero Section */
+.hero {
     position: relative;
     height: 100vh;
-    background: url('tech-hero-bg.jpg') no-repeat center center/cover;
-    background-color: #1f1f1f;
+    min-height: 600px;
     display: flex;
     align-items: center;
-    text-align: center;
-    color: #e0e0e0;
+    justify-content: center;
+    background: none;
+    overflow: hidden;
 }
 
-header .overlay {
+.hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(18, 18, 18, 0.8);
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse at 60% 40%, #00aaff55 0%, #121212 70%),
+                linear-gradient(120deg, #1f1f1f 0%, #232a34 100%);
+    filter: blur(0px) brightness(1.1);
+    opacity: 0.95;
+    pointer-events: none;
+    animation: hero-bg-move 12s ease-in-out infinite alternate;
 }
 
-header .container {
+@keyframes hero-bg-move {
+    0% { background-position: 60% 40%, 0% 0%; }
+    100% { background-position: 40% 60%, 100% 100%; }
+}
+
+.hero-content {
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
 }
 
-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-header h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-.btn {
-    padding: 0.75rem 1.5rem;
-    background: #00aaff;
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -2px;
     color: #fff;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 32px #00aaff33, 0 1px 0 #222;
 }
 
-.btn:hover {
-    background: #008fcc;
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.hero-tagline {
+    font-size: 1.3rem;
+    color: #b0c4d4;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #00aaff 0%, #00e0ff 100%);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 8px 32px #00aaff33, 0 1.5px 0 #222;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    outline: none;
+}
+
+.hero-btn:hover, .hero-btn:focus {
+    background: linear-gradient(90deg, #00e0ff 0%, #00aaff 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 12px 40px #00aaff55, 0 2px 0 #222;
+}
+
+/* Remove old hero section background and overlay */
+header {
+    background: none !important;
+}
+header .overlay {
+    display: none !important;
+}
+header .container {
+    z-index: 1;
+}
+header h1, header h2, header .btn {
+    /* Remove old styles if needed, now handled by .hero-* classes */
+}
+
+/* Responsive Hero Section */
+@media (max-width: 700px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+    .hero-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    .hero {
+        min-height: 400px;
+    }
 }
 
 /* About Section */
@@ -254,10 +329,13 @@ header h2 {
 }
 
 .project-item {
-    background: #1f1f1f;
+    background: rgba(30, 40, 60, 0.92);
     overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 24px #00aaff11;
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .project-item img {
@@ -273,18 +351,28 @@ header h2 {
 }
 
 .project-info h4 {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
     margin-bottom: 0.5rem;
 }
 
 .project-info h5 {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #00ff99;
     margin-bottom: 0.5rem;
-    font-weight: 300;
-    color: #00aaff;
 }
 
 .project-info p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
 }
 
 /* Project Buttons */
@@ -416,4 +504,154 @@ footer {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#matrix-bg {
+    position: fixed !important;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0 !important;
+    pointer-events: none;
+}
+
+nav, .hero, header, main, section, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Elegant Portfolio Enhancements --- */
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #e0e0e0;
+    background: linear-gradient(120deg, #181f2a 0%, #232a34 100%);
+    line-height: 1.7;
+}
+
+section, header, footer {
+    padding: 5rem 0 4rem 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #fff;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h1.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+}
+
+h2.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+    font-size: 1.3rem;
+    color: #b0c4d4;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Section Dividers & Backgrounds */
+section:not(:last-child) {
+    border-bottom: 1px solid #22304a;
+}
+#about, #resume, #contact {
+    background: rgba(24, 31, 42, 0.98);
+}
+#skills, #projects {
+    background: linear-gradient(120deg, #1f2633 0%, #232a34 100%);
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.85rem 2rem;
+    background: #00aaff;
+    color: #fff;
+    border: 2px solid #00aaff;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s, transform 0.15s;
+    box-shadow: 0 2px 16px #00aaff22;
+    outline: none;
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.btn:hover, .btn:focus {
+    background: #fff;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+    box-shadow: 0 4px 24px #00aaff44;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Project Section Color (Blue/White) */
+#projects h3 {
+    color: #00aaff;
+}
+.project-info h4 {
+    color: #fff;
+}
+.project-info h5 {
+    color: #00aaff;
+    font-weight: 500;
+}
+.project-info p {
+    color: #e0e0e0;
+}
+
+/* Section Spacing & Alignment */
+.project-grid, .about-content, .skills-table {
+    margin-top: 2.5rem;
+}
+.project-item {
+    background: rgba(30, 40, 60, 0.92);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 24px #00aaff11;
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-item:hover {
+    box-shadow: 0 8px 32px #00aaff33;
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* AOS Animations (for fade/slide-in) */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: none;
+}
+[data-aos="fade-up"] {
+    transform: translateY(40px);
+}
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+[data-aos="fade-right"] {
+    transform: translateX(-40px);
+}
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+}
+[data-aos="fade-left"] {
+    transform: translateX(40px);
+}
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
 }

@@ -5,13 +5,14 @@
     <title>Colin Ward | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts and Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-c5CgmoPv1e8KkmVScdF9eD3QY7GjzjPf0JKClJh6YWuL/qRSN8pYfNmzkp5a7fE0dvP27Z9Q1A5Z7W3xFKn4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <!-- AOS Animate On Scroll CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
         <div class="container">
@@ -35,17 +36,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="home">
-        <div class="overlay"></div>
-        <div class="container">
-            <h1>Colin Ward</h1>
-            <h2>Computer Science Student & Developer</h2>
-            <a href="#projects" class="btn">View My Work</a>
+    <header id="home" class="hero" data-aos="fade-up">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Colin Ward</h1>
+            <h2 class="hero-subtitle">MSBA Student & Developer</h2>
+            <p class="hero-tagline">Solving problems with data and code.</p>
+            <a href="#projects" class="btn hero-btn">View My Work</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <div class="container about-container">
             <h3>About Me</h3>
             <div class="about-content">
@@ -54,7 +56,7 @@
                 </div>
                 <div class="about-text">
                     <p>
-                        I am a Computer Science major at Wake Forest University with minors in Mathematics and Entrepreneurship. With a passion for developing innovative solutions, I have experience in various programming languages and frameworks. I have interned at Reynolds American Inc. and Easton Utilities, working on data modeling, web development, and optimization projects. I am proficient with Linux, Git, and have experience with Java, SQL, C, Python, and more. In addition to my technical skills, I have demonstrated leadership as the Head Committee Chair for Chi Psi Fraternity and participated in Men's Club Lacrosse.
+                        I'm a Master’s in Business Analytics student with a B.S. in Computer Science and minors in Mathematics and Entrepreneurship from Wake Forest University. I’m passionate about using data, technology, and creative problem-solving to build tools that make a real impact. My interests include data science, analytics, machine learning, and software development. I enjoy working on projects that combine technical depth with business context and clear communication. I'm always looking for opportunities to learn new skills, explore interesting problems, and create practical, well-designed solutions.
                     </p>
                 </div>
             </div>
@@ -62,7 +64,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
         <div class="container">
             <h3>Technical Skills</h3>
             <div class="skills-table">
@@ -75,7 +77,7 @@
                         <span><i class="fas fa-code"></i> C</span>
                         <span><i class="fab fa-python"></i> Python</span>
                         <span><i class="fas fa-code"></i> Racket</span>
-                        <span><i class="fas fa-code"></i> C#</span>
+                        <span><i class="fas fa-code"></i> C++</span>
                     </div>
                 </div>
                 <!-- Frontend Development -->
@@ -131,12 +133,12 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
         <div class="container">
             <h3>My Projects</h3>
             <div class="project-grid">
                 <!-- Project 1: Meta-Learning for Coreset Selection -->
-                <div class="project-item" style="flex: 1 1 100%;">
+                <div class="project-item" style="flex: 1 1 100%;" data-aos="fade-up">
                     <div class="project-info">
                         <h4>Meta‑Learning for Coreset Selection: Identifying Optimal Techniques Across Diverse Datasets</h4>
                         <h5>Machine Learning Research Project</h5>
@@ -150,7 +152,7 @@
                     </div>
                 </div>
                 <!-- Project 2: WakeUp Android App -->
-                <div class="project-item" style="flex: 1 1 100%;">
+                <div class="project-item" style="flex: 1 1 100%;" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-info">
                         <h4>WakeUp Android App</h4>
                         <h5>Software Engineering Class Project</h5>
@@ -163,7 +165,7 @@
                     </div>
                 </div>
                 <!-- Project 3: Personal Portfolio -->
-                <div class="project-item" style="flex: 1 1 100%;">
+                <div class="project-item" style="flex: 1 1 100%;" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-info">
                         <h4>Personal Portfolio</h4>
                         <h5>Personal Web‑Design Project</h5>
@@ -183,7 +185,7 @@
     </section>
 
     <!-- Resume Section -->
-    <section id="resume">
+    <section id="resume" data-aos="fade-up">
         <div class="container">
             <h3>Resume</h3>
             <p>You can download my resume by clicking the button below.</p>
@@ -192,7 +194,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <div class="container">
             <h3>Contact</h3>
             <p>Email: wardcj21@wfu.edu</p>
@@ -201,7 +203,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer data-aos="fade-up">
         <p>&copy; 2025 Colin Ward. All Rights Reserved.</p>
     </footer>
 
@@ -215,6 +217,14 @@
             burger.classList.toggle('toggle');
         });
     </script>
-
+    <!-- AOS Animate On Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 900,
+        offset: 60
+      });
+    </script>
 </body>
 </html>
