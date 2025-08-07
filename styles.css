@@ -452,7 +452,7 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 100%;
+        top: 70px; /* Height of the nav bar */
         left: 0;
         height: auto;
         background: #1f1f1f;
@@ -460,14 +460,15 @@ footer {
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         transition: transform 0.3s ease-in;
         padding: 2rem 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 99;
     }
 
     .nav-active {
-        transform: translateY(0%);
+        transform: translateY(0);
     }
 
     .nav-links li {
