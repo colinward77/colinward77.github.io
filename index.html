@@ -216,13 +216,14 @@
 
     <!-- JavaScript for Responsive Menu -->
     <script>
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
 
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            burger.classList.toggle('toggle');
-            document.querySelector('nav').classList.toggle('menu-open');
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
         });
     </script>
     <!-- AOS Animate On Scroll JS -->
