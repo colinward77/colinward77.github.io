@@ -454,16 +454,17 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #1f1f1f;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: left;
+        background-color: rgba(31, 31, 31, 0.95);
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        text-align: right;
         padding: 1rem 0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+        box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
         transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
     }
 
     .nav-links.nav-active {
@@ -481,10 +482,11 @@ footer {
 
     .nav-links li a {
         display: block;
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         font-size: 1.2rem;
         color: white;
         text-decoration: none;
+        text-align: right;
     }
 
     .burger {
